@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess the Number</title>
+</head>
+<body class="bg-purple-400 flex mt-16 justify-center" onload="init()">
+    <!-- <header class="bg-amber-500">
+        <nav class="p-3">
+            <ul class="text-2xl font-normal flex sm:flex-col lg:flex-row justify-end space-x-16">
+                <p class="text-yellow-100 font-bold pr-[30rem]">Guess the Number game</p>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact_us">Contact Us</a></li>
+             </ul>
+        </nav> 
+    </header> -->
+
+    <main>
+        <div class=" flex justify-center mt-4 ">
+            <div class="bg-white w-[30vw] h-[80vh] rounded-md">
+                <div class="welcomeScreen">
+                    <h2 class="p-2 text-center font-semibold text-xl">Guess The Random Number Between 1 to 100</h2>
+
+                    <img src="./img/image.png" alt="" class="w-[20rem] ml-11">
+                
+
+                    <section class="flex flex-col mt-6 ml-[7rem]">
+                        <p class="font-semibold mb-3 ml-7">Enjoy the game</p>
+                        <button type="button" onclick="easyMode()" class="text-white welcome_button hover:shadow-lg bg-purple-700 hover:bg-purple-900 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:hover:bg-purple-700 w-44">Enter The Game</button>
+                       
+                    </section>
+                </div>
+<!-- 
+                This is game area -->
+
+                <section class="gameArea hidden">
+                    <div class="newGameButton">
+                        <button type="button" class="text-white  bg-purple-700 mt-3 ml-[7.4rem] hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:hover:bg-purple-700 w-44" onclick="newGameStart()">Start New Game</button>
+                    </div>
+                </section>
+
+                <section class="guessAndStates hidden">
+
+                    <section class="guess mt-16">
+                        <h1 class=" headingGuess text-4xl font-semibold text-center mt-2">Your Guess</h1>
+                        <input type="number" min="1" max="100" id="userInput" class=" ml-[6.5rem] mt-4 border border-gray-500 text-gray-900 text-lg rounded-lg block w-[50%] p-2.5 dark:placeholder-gray-400 dark:text-black " onchange="compareGuess()" placeholder="Enter Your Number">
+                      </section>
+        
+                      <section class="states mt-32 ml-2 f         ">
+                        <div class="info">
+                            <p>
+                                Number of previous Attempts <span class="attempts text-red-700 font-bold">0</span> 😍
+                            </p>
+                        </div>
+        
+                        <div class="info">
+                            <p>
+                                Number of previous Guesses <span class="guesses text-red-700 font-bold">0</span> 👈
+                            </p>
+                        </div>
+                      </section>
+                    
+                </section>
+            </div>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
